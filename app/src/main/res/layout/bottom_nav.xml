@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="0dp"
+    android:layout_width="0dp"
+    android:id="@+id/bottom_nav">
+
+    <item
+        android:id="@+id/navigation_1"
+        android:icon="@drawable/ic_android_black_24dp"
+        android:title="학과공지" />
+
+    <item
+        android:id="@+id/navigation_2"
+        android:icon="@drawable/ic_android_black_24dp"
+        android:title="학교공지" />
+
+    <item
+        android:id="@+id/navigation_3"
+        android:icon="@drawable/ic_android_black_24dp"
+        android:title="학생회공지" />
+
+    <item
+        android:id="@+id/navigation_4"
+        android:icon="@drawable/ic_android_black_24dp"
+        android:title="북마크" />
+
+</menu>
