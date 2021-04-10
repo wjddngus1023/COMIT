@@ -1,13 +1,9 @@
 package com.example.comit.Notice;
 
-import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebChromeClient;
-import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -25,7 +21,7 @@ public class Univ_Frag extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         setHasOptionsMenu(true);
 
-        View v2 = inflater.inflate(R.layout.frag2, container, false);
+        View v2 = inflater.inflate(R.layout.univnotice, container, false);
 
         WebView webview = v2.findViewById(R.id.webview);
 
