@@ -42,12 +42,17 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.textview2.setText(item.getSubTitle());
     }
 
+    public void addItem(RecyclerViewItem data){
+        mData.add(data);
+    }
+
     @Override
     public int getItemCount() {
         return mData.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
+
         TextView textview1;
         TextView textview2;
 
@@ -56,6 +61,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
             textview1 = itemView.findViewById(R.id.departnotice_recycler_tv1);
             textview2 = itemView.findViewById(R.id.departnotice_recycler_tv2);
+        }
+        void onBind(RecyclerViewItem data){
+            textview1.setText(data.getMainTitle());
+            textview2.setText(data.getSubTitle());
         }
     }
 }
