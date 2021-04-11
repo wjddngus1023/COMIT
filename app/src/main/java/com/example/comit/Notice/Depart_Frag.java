@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.comit.R;
-import com.example.comit.ViewAdapter.RecyclerViewAdapter;
+import com.example.comit.ViewAdapter.DepartRecyclerViewAdapter;
 import com.example.comit.ViewAdapter.RecyclerViewItem;
 
 import org.jsoup.Jsoup;
@@ -29,7 +29,7 @@ import java.util.ArrayList;
 // 학과 공지
 public class Depart_Frag extends Fragment {
     RecyclerView rv = null;
-    RecyclerViewAdapter mAdapter = null;
+    DepartRecyclerViewAdapter mAdapter = null;
     ArrayList<RecyclerViewItem> mList;
     String departURL = "https://www.hanbat.ac.kr/prog/bbsArticle/BBSMSTR_000000000333/list.do";
 
@@ -47,7 +47,7 @@ public class Depart_Frag extends Fragment {
         rv = (RecyclerView) v.findViewById(R.id.departnotice);
 
         mList = new ArrayList<>();
-        mAdapter = new RecyclerViewAdapter(getActivity(), mList);
+        mAdapter = new DepartRecyclerViewAdapter(getActivity(), mList);
         rv.setLayoutManager(new LinearLayoutManager(getActivity()));
         rv.setAdapter(mAdapter);
 
@@ -75,7 +75,7 @@ public class Depart_Frag extends Fragment {
             try {
                 Document doc = Jsoup.connect(departURL).get();
                 final Elements Num = doc.select("div.no-more-tables tr td"); // td중에서 첫번째 꺼 가져오게해야돼
-                final Elements Title = doc.select(".subject td"); // 여기랑 윗줄 태그만 수정
+                final Elements Title = doc.select("div.no-more-tables tr td"); // td중에서 두번째 거 가져오면 되
 
                 Handler handler = new Handler(Looper.getMainLooper());
                 handler.post(new Runnable() {
@@ -90,7 +90,7 @@ public class Depart_Frag extends Fragment {
                         for (int i = 1; i < ListNum.size() ; i++) {
                             RecyclerViewItem data = new RecyclerViewItem();
                             data.setMainTitle(ListNum.get(i));
-                            //data.setSubTitle(ListTitle.get(i));
+                            data.setSubTitle(ListTitle.get(i));
 
                             mAdapter.addItem(data);
                         }

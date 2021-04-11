@@ -14,28 +14,28 @@ import com.example.comit.R;
 
 import java.util.ArrayList;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
+public class DepartRecyclerViewAdapter extends RecyclerView.Adapter<DepartRecyclerViewAdapter.ViewHolder> {
     private ArrayList<RecyclerViewItem> mData = null;
 
-    public RecyclerViewAdapter(FragmentActivity activity, ArrayList<RecyclerViewItem> data){
+    public DepartRecyclerViewAdapter(FragmentActivity activity, ArrayList<RecyclerViewItem> data){
         mData = data;
     }
 
     @NonNull
     @Override
-    public RecyclerViewAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public DepartRecyclerViewAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         Context context = parent.getContext();
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         View v = inflater.inflate(R.layout.recycler_dapartnotice,parent,false);
-        RecyclerViewAdapter.ViewHolder viewHolder = new RecyclerViewAdapter.ViewHolder(v);
+        DepartRecyclerViewAdapter.ViewHolder viewHolder = new DepartRecyclerViewAdapter.ViewHolder(v);
 
         return viewHolder;
-        }
+    }
 
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerViewAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull DepartRecyclerViewAdapter.ViewHolder holder, int position) {
         RecyclerViewItem item = mData.get(position);
 
         holder.textview1.setText(item.getMainTitle());
