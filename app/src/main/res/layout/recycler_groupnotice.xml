@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
-        android:layout_width="70dp"
+        android:layout_width="50dp"
         android:layout_height="match_parent"
         android:gravity="center"
         android:id="@+id/groupnotice_recycler_tv1"
@@ -30,6 +30,7 @@
         android:maxLines="2"
         android:padding="10dp"
         android:textSize="12dp"
+        android:layout_marginRight="70dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/groupnotice_recycler_tv1"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -40,6 +41,14 @@
         android:padding="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/groupnotice_recycler_tv1"/>
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:id="@+id/groupnotice_recycler_tv3"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

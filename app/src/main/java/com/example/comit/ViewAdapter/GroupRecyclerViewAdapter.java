@@ -40,6 +40,7 @@ public class GroupRecyclerViewAdapter extends RecyclerView.Adapter<GroupRecycler
 
         holder.textview1.setText(item.getMainTitle());
         holder.textview2.setText(item.getSubTitle());
+        holder.textview3.setText(item.getDate());
     }
 
     public void addItem(RecyclerViewItem data){
@@ -55,16 +56,19 @@ public class GroupRecyclerViewAdapter extends RecyclerView.Adapter<GroupRecycler
 
         TextView textview1;
         TextView textview2;
+        TextView textview3;
 
         ViewHolder(View itemView){
             super(itemView);
 
             textview1 = itemView.findViewById(R.id.groupnotice_recycler_tv1);
             textview2 = itemView.findViewById(R.id.groupnotice_recycler_tv2);
+            textview3 = itemView.findViewById(R.id.groupnotice_recycler_tv3);
         }
         void onBind(RecyclerViewItem data){
             textview1.setText(data.getMainTitle());
             textview2.setText(data.getSubTitle());
+            textview3.setText(data.getDate());
         }
     }
 }

@@ -69,13 +69,15 @@ public class Depart_Frag extends Fragment {
     private class DepartSoup extends AsyncTask<Void, Void, Void> {
         ArrayList<String> ListNum = new ArrayList<>();
         ArrayList<String> ListTitle = new ArrayList<>();
+        ArrayList<String> ListDate = new ArrayList<>();
 
         @Override
         protected Void doInBackground(Void... voids) {
             try {
                 Document doc = Jsoup.connect(departURL).get();
-                final Elements Num = doc.select("div.no-more-tables tr td"); // td중에서 첫번째 꺼 가져오게해야돼
-                final Elements Title = doc.select("div.no-more-tables tr td"); // td중에서 두번째 거 가져오면 되
+                final Elements Num = doc.select("div.no-more-tables table tbody tr td.atchFileId:nth-of-type(1)"); // 번호
+                final Elements Title = doc.select("div.no-more-tables table tbody tr td.subject"); // 제목
+                final Elements Date = doc.select("div.no-more-tables table tbody tr td.regDate");
 
                 Handler handler = new Handler(Looper.getMainLooper());
                 handler.post(new Runnable() {
@@ -87,10 +89,14 @@ public class Depart_Frag extends Fragment {
                         for (Element element : Title) {
                             ListTitle.add(element.text());
                         }
-                        for (int i = 1; i < ListNum.size() ; i++) {
+                        for( Element element : Date){
+                            ListDate.add(element.text());
+                        }
+                        for (int i = 0; i < ListNum.size() ; i++) {
                             RecyclerViewItem data = new RecyclerViewItem();
                             data.setMainTitle(ListNum.get(i));
                             data.setSubTitle(ListTitle.get(i));
+                            data.setDate(ListDate.get(i));
 
                             mAdapter.addItem(data);
                         }

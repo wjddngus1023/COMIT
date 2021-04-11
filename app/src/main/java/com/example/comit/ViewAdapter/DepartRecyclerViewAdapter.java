@@ -12,6 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.comit.R;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
 public class DepartRecyclerViewAdapter extends RecyclerView.Adapter<DepartRecyclerViewAdapter.ViewHolder> {
@@ -40,6 +42,7 @@ public class DepartRecyclerViewAdapter extends RecyclerView.Adapter<DepartRecycl
 
         holder.textview1.setText(item.getMainTitle());
         holder.textview2.setText(item.getSubTitle());
+        holder.textview3.setText(item.getDate());
     }
 
     public void addItem(RecyclerViewItem data){
@@ -55,16 +58,19 @@ public class DepartRecyclerViewAdapter extends RecyclerView.Adapter<DepartRecycl
 
         TextView textview1;
         TextView textview2;
+        TextView textview3;
 
         ViewHolder(View itemView){
             super(itemView);
 
             textview1 = itemView.findViewById(R.id.departnotice_recycler_tv1);
             textview2 = itemView.findViewById(R.id.departnotice_recycler_tv2);
+            textview3 = itemView.findViewById(R.id.departnotice_recycler_tv3);
         }
         void onBind(RecyclerViewItem data){
             textview1.setText(data.getMainTitle());
             textview2.setText(data.getSubTitle());
+            textview3.setText(data.getDate());
         }
     }
 }
