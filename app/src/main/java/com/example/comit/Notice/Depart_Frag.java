@@ -7,6 +7,7 @@ import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -51,6 +52,7 @@ public class Depart_Frag extends Fragment {
         rv.setLayoutManager(new LinearLayoutManager(getActivity()));
         rv.setAdapter(mAdapter);
 
+
         getData();
 
         //mainText = "공지번호";
@@ -61,6 +63,7 @@ public class Depart_Frag extends Fragment {
         return v;
     }
 
+
     private void getData() {
         DepartSoup departSoup = new DepartSoup();
         departSoup.execute();
@@ -70,14 +73,16 @@ public class Depart_Frag extends Fragment {
         ArrayList<String> ListNum = new ArrayList<>();
         ArrayList<String> ListTitle = new ArrayList<>();
         ArrayList<String> ListDate = new ArrayList<>();
-
+        ArrayList<String> ListLink = new ArrayList<>();
+        
         @Override
         protected Void doInBackground(Void... voids) {
             try {
                 Document doc = Jsoup.connect(departURL).get();
                 final Elements Num = doc.select("div.no-more-tables table tbody tr td.atchFileId:nth-of-type(1)"); // 번호
                 final Elements Title = doc.select("div.no-more-tables table tbody tr td.subject"); // 제목
-                final Elements Date = doc.select("div.no-more-tables table tbody tr td.regDate");
+                final Elements Date = doc.select("div.no-more-tables table tbody tr td.regDate"); // 날짜
+                final Elements Link = doc.select("div.no-more-tables table tbody tr td.regDate a"); // 링크주소
 
                 Handler handler = new Handler(Looper.getMainLooper());
                 handler.post(new Runnable() {
@@ -92,11 +97,15 @@ public class Depart_Frag extends Fragment {
                         for( Element element : Date){
                             ListDate.add(element.text());
                         }
+                        for( Element element : Link){
+                            ListLink.add(element.text());
+                        }
                         for (int i = 0; i < ListNum.size() ; i++) {
                             RecyclerViewItem data = new RecyclerViewItem();
                             data.setMainTitle(ListNum.get(i));
                             data.setSubTitle(ListTitle.get(i));
                             data.setDate(ListDate.get(i));
+                            data.setLink(ListLink.get(i));
 
                             mAdapter.addItem(data);
                         }

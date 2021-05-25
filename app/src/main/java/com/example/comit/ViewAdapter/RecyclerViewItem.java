@@ -7,9 +7,10 @@ public class RecyclerViewItem {
     private String mainTitle;
     private String subTitle;
     private String Date;
+    private String Link;
 
-    public void setIcon(Drawable icon) {
-        iconDrawable = icon;
+    public void setLink(String Link) {
+        this.Link = Link;
     }
     public void setMainTitle(String mainTitle) {
         this.mainTitle = mainTitle;
@@ -19,8 +20,8 @@ public class RecyclerViewItem {
     }
     public void setDate(String Date){this.Date = Date;
     }
-    public Drawable getIconDrawable() {
-        return iconDrawable;
+    public String getLink() {
+        return Link;
     }
     public String getMainTitle() {
         return mainTitle;
