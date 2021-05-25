@@ -1,5 +1,7 @@
 package com.example.comit.Notice;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -12,6 +14,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.lifecycle.ViewModel;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -19,6 +23,7 @@ import com.example.comit.R;
 import com.example.comit.ViewAdapter.DepartRecyclerViewAdapter;
 import com.example.comit.ViewAdapter.RecyclerViewItem;
 
+import org.jetbrains.annotations.NotNull;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -52,17 +57,33 @@ public class Depart_Frag extends Fragment {
         rv.setLayoutManager(new LinearLayoutManager(getActivity()));
         rv.setAdapter(mAdapter);
 
+        // 클릭리스너 테스트
+        // Longclick리스너로 북마크
+        // clicklistener로 웹 이동
 
         getData();
-
-        //mainText = "공지번호";
-        //subText = "내용";
-
         mAdapter.notifyDataSetChanged();
 
         return v;
     }
+    public class ViewHolder extends RecyclerView.ViewHolder{
 
+        public ViewHolder(@NonNull @NotNull View itemView) {
+            super(itemView);
+
+            rv.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    int pos = getAdapterPosition();
+                    RecyclerViewItem item = mList.get(pos);
+                    if(pos != RecyclerView.NO_POSITION){
+                        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(item.getLink()));
+                        startActivity(intent);
+                    }
+                }
+            });
+        }
+    } // 여기 외않됀대?
 
     private void getData() {
         DepartSoup departSoup = new DepartSoup();
@@ -74,7 +95,7 @@ public class Depart_Frag extends Fragment {
         ArrayList<String> ListTitle = new ArrayList<>();
         ArrayList<String> ListDate = new ArrayList<>();
         ArrayList<String> ListLink = new ArrayList<>();
-        
+
         @Override
         protected Void doInBackground(Void... voids) {
             try {
@@ -82,7 +103,8 @@ public class Depart_Frag extends Fragment {
                 final Elements Num = doc.select("div.no-more-tables table tbody tr td.atchFileId:nth-of-type(1)"); // 번호
                 final Elements Title = doc.select("div.no-more-tables table tbody tr td.subject"); // 제목
                 final Elements Date = doc.select("div.no-more-tables table tbody tr td.regDate"); // 날짜
-                final Elements Link = doc.select("div.no-more-tables table tbody tr td.regDate a"); // 링크주소
+                final Elements Link = doc.select("div.no-more-tables table tbody tr td.subject a"); // 링크
+
 
                 Handler handler = new Handler(Looper.getMainLooper());
                 handler.post(new Runnable() {
