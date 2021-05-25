@@ -3,12 +3,26 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+
+    <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="길라잡이"
-        android:gravity="center"
-        android:textSize="40dp"
-        ></TextView>
+        android:id="@+id/guide_list"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="100dp"
+        android:dividerHeight="30dp"
+        android:divider="#ffffff"
+        />
+
+
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:text="길라잡이"-->
+<!--        android:gravity="center"-->
+<!--        android:textSize="40dp"-->
+<!--        ></TextView>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
