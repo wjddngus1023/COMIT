@@ -1,6 +1,8 @@
 package com.example.comit.ViewAdapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +20,7 @@ import java.util.ArrayList;
 
 public class DepartRecyclerViewAdapter extends RecyclerView.Adapter<DepartRecyclerViewAdapter.ViewHolder> {
     private ArrayList<RecyclerViewItem> mData = null;
+
 
     public DepartRecyclerViewAdapter(FragmentActivity activity, ArrayList<RecyclerViewItem> data){
         mData = data;
