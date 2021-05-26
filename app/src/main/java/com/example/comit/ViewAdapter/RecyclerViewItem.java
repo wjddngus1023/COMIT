@@ -17,6 +17,7 @@ public class RecyclerViewItem {
     }
     public void setDate(String Date){this.Date = Date;
     }
+
     public String getLink() {return Link;}
     public String getMainTitle() {
         return mainTitle;
@@ -27,6 +28,7 @@ public class RecyclerViewItem {
     public String getDate(){
         return Date;
     }
+
 }
 
 

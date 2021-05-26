@@ -14,6 +14,8 @@ import com.example.comit.Guide.GuideActivity;
 import com.example.comit.LectureEval.LectureEvalActivity;
 import com.example.comit.Notice.NoticeActivity;
 import com.example.comit.Settings.SettingsActivity;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
 public class MainPage extends AppCompatActivity {
 
@@ -76,5 +78,14 @@ public class MainPage extends AppCompatActivity {
             //상단바 제거
 
             //잠깐 첫화면 MainPage로 바꿈
+
+            FloatingActionButton fab = findViewById(R.id.fab);
+            fab.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Snackbar.make(view, "Here's a Snackbar", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                }
+            }); // 플로팅버튼 리스너
         }
     }
