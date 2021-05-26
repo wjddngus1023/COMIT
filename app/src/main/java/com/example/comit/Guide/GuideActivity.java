@@ -1,5 +1,6 @@
 package com.example.comit.Guide;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
@@ -7,12 +8,15 @@ import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import com.example.comit.R;
+
+import java.util.List;
 
 public class GuideActivity extends AppCompatActivity {
 
@@ -31,6 +35,8 @@ public class GuideActivity extends AppCompatActivity {
         actionBar.hide();
         //상단바 제거
 
+        Intent intent1 = new Intent(this, Guide_frag_1.class); // 이동 액티비티 설정
+
         ListView listview;
         ListViewAdapter adapter;
 
@@ -46,13 +52,14 @@ public class GuideActivity extends AppCompatActivity {
         adapter.addItem(ContextCompat.getDrawable(this,R.drawable.ic_android_black_24dp),"5번","5번 설명이에요");
         adapter.addItem(ContextCompat.getDrawable(this,R.drawable.ic_android_black_24dp),"6번","6번 설명이에요");
 
-//        listview.setOnClickListener(new AdapterView.OnClickListener(){
-//
-//            @Override
-//            public void onClick(View v) {
-//
-//            }
-//        }); // 클릭리스너 넣는거 해보자
+        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                final ListViewItem item = (ListViewItem) adapter.getItem(position);
+                startActivity(intent1); // 액티비티 이동
+                Toast.makeText(GuideActivity.this, item.getTitle(), Toast.LENGTH_SHORT).show(); // 여긴 지워도됨
+            }
+        });
     }
 
 

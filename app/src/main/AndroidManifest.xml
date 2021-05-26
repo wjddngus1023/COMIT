@@ -67,6 +67,16 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".Guide.Guide_frag_1"> // 길라잡이 #1
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+
 
     </application>
 
