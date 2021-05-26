@@ -30,6 +30,8 @@ public class MainPage extends AppCompatActivity {
             Button btn_lecture = findViewById(R.id.btn_lecture);
             Button btn_settings = findViewById(R.id.btn_settings);
 
+            Intent intent = new Intent(this, ChatbotActivity.class);
+
             btn_notice.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -83,8 +85,9 @@ public class MainPage extends AppCompatActivity {
             fab.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Snackbar.make(view, "Here's a Snackbar", Snackbar.LENGTH_LONG)
+                    Snackbar.make(view, "챗봇 커미를 부릅니다", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+                    startActivity(intent);
                 }
             }); // 플로팅버튼 리스너
         }

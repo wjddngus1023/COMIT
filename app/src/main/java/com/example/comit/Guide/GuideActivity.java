@@ -45,7 +45,6 @@ public class GuideActivity extends AppCompatActivity {
         adapter.addItem(ContextCompat.getDrawable(this,R.drawable.ic_android_black_24dp),"4번","4번 설명이에요");
         adapter.addItem(ContextCompat.getDrawable(this,R.drawable.ic_android_black_24dp),"5번","5번 설명이에요");
         adapter.addItem(ContextCompat.getDrawable(this,R.drawable.ic_android_black_24dp),"6번","6번 설명이에요");
-        adapter.addItem(ContextCompat.getDrawable(this,R.drawable.ic_android_black_24dp),"7번","7번 설명이에요");
 
 //        listview.setOnClickListener(new AdapterView.OnClickListener(){
 //
