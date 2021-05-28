@@ -26,21 +26,21 @@
     
     <Button
         android:id="@+id/btn_notice"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="100dp"
-        android:scaleType="fitXY"
-        android:background="@drawable/ic_android_black_24dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="150dp"
+        android:scaleType="fitCenter"
         app:layout_constraintEnd_toStartOf="@id/btn_guide"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/ic_notice"
         />
 
     <TextView
         android:id="@+id/tv_notice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="20dp"
         android:text="공지사항"
         android:textColor="#000000"
         android:textSize="14sp"
@@ -50,21 +50,20 @@
 
     <Button
         android:id="@+id/btn_guide"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:onClick="@{()->vm.goBoard()}"
-        android:scaleType="fitXY"
-        android:background="@drawable/ic_android_black_24dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="@id/btn_notice"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/btn_notice"
-        app:layout_constraintTop_toTopOf="@id/btn_notice" />
+        app:layout_constraintTop_toTopOf="@id/btn_notice"
+        android:background="@drawable/ic_bulb"/>
 
     <TextView
         android:id="@+id/tv_guide"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="20dp"
         android:text="길라잡이"
         android:textColor="#000000"
         android:textSize="14sp"
@@ -74,20 +73,20 @@
 
     <Button
         android:id="@+id/btn_community"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="48dp"
-        android:scaleType="fitXY"
-        android:background="@drawable/ic_android_black_24dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="60dp"
+        android:scaleType="fitCenter"
         app:layout_constraintEnd_toStartOf="@id/btn_guide"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_notice" />
+        app:layout_constraintTop_toBottomOf="@id/tv_notice"
+        android:background="@drawable/ic_letterballoon"/>
 
     <TextView
         android:id="@+id/tv_community"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="20dp"
         android:text="커뮤니티"
         android:textColor="#000000"
         android:textSize="14sp"
@@ -97,19 +96,19 @@
 
     <Button
         android:id="@+id/btn_lecture"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:scaleType="fitXY"
-        android:background="@drawable/ic_android_black_24dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="fitCenter"
         app:layout_constraintTop_toTopOf="@id/btn_community"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/btn_notice" />
+        app:layout_constraintStart_toEndOf="@id/btn_notice"
+        android:background="@drawable/ic_notepad"/>
 
     <TextView
         android:id="@+id/tv_lecture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="20dp"
         android:text="강의평가"
         android:textColor="#000000"
         android:textSize="14sp"
@@ -119,20 +118,20 @@
 
     <Button
         android:id="@+id/btn_settings"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="48dp"
-        android:scaleType="fitXY"
-        android:background="@drawable/ic_android_black_24dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="60dp"
+        android:scaleType="fitCenter"
         app:layout_constraintEnd_toStartOf="@id/btn_guide"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_community" />
+        app:layout_constraintTop_toBottomOf="@id/tv_community"
+        android:background="@drawable/ic_settings"/>
 
     <TextView
         android:id="@+id/tv_settings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="20dp"
         android:text="설정"
         android:textColor="#000000"
         android:textSize="14sp"
@@ -146,11 +145,13 @@
         android:id = "@+id/fab"
         android:layout_marginBottom="40dp"
         android:layout_marginRight="40dp"
-        android:src = "@drawable/ic_android_black_24dp"
+        android:src = "@drawable/ic_comme"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:clickable="true"
         android:backgroundTint="#BCCDD5"
+
         >
 
     </com.google.android.material.floatingactionbutton.FloatingActionButton>
