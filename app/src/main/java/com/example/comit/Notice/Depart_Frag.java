@@ -37,8 +37,7 @@ public class Depart_Frag extends Fragment {
     RecyclerView rv = null;
     DepartRecyclerViewAdapter mAdapter = null;
     ArrayList<RecyclerViewItem> mList;
-    String departURL = "https://www.hanbat.ac.kr/prog/bbsArticle/BBSMSTR_000000000333/list.do";
-
+    String departURL = "https://www.hanbat.ac.kr/prog/bbsArticle/BBSMSTR_000000000333/list.do?pageIndex=1"; // ?이후는 페이지번호에요
     private String mainText;
     private String subText;
 

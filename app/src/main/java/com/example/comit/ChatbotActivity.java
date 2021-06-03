@@ -15,7 +15,7 @@ public class ChatbotActivity extends AppCompatActivity {
     private WebView webView;
    //  private String url = "https://www.naver.com"; // 네이버
    //  private String url = "https://silly-fermat-9391eb.netlify.app"; // 커밋페이지(지훈이가 맨첨 만든거)
-    private String url = "https://wizardly-roentgen-fef948.netlify.app"; // 챗봇 html
+    private String url = "https://affectionate-darwin-76b7c9.netlify.app"; // 챗봇 html
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
