@@ -7,12 +7,17 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.WindowManager;
 
+import com.example.comit.ChatbotActivity;
 import com.example.comit.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
 public class NoticeActivity extends AppCompatActivity {
     private BottomNavigationView BottomNav;
@@ -43,6 +48,7 @@ public class NoticeActivity extends AppCompatActivity {
             }
         });
         BottomNav.setSelectedItemId(R.id.navigation_1);
+
 
     }
 

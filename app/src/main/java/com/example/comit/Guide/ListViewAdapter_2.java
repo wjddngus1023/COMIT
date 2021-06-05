@@ -14,11 +14,11 @@ import com.example.comit.ViewAdapter.RecyclerViewItem;
 
 import java.util.ArrayList;
 
-public class ListViewAdapter extends BaseAdapter {
+public class ListViewAdapter_2 extends BaseAdapter {
 
     private ArrayList<ListViewItem> itemList = new ArrayList<ListViewItem>();
 
-    public ListViewAdapter(){
+    public ListViewAdapter_2(){
 
     }
 
@@ -32,7 +32,7 @@ public class ListViewAdapter extends BaseAdapter {
 
         if (v == null) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            v = inflater.inflate(R.layout.guide_item, Vg, false);
+            v = inflater.inflate(R.layout.guide_item_2, Vg, false);
         }
         ImageView img = (ImageView) v.findViewById(R.id.imgview_item) ;
         TextView mainText = (TextView) v.findViewById(R.id.tv_item_main) ;

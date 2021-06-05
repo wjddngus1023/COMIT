@@ -1,5 +1,6 @@
 package com.example.comit.Notice;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -14,10 +15,13 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.comit.ChatbotActivity;
 import com.example.comit.R;
 import com.example.comit.ViewAdapter.DepartRecyclerViewAdapter;
 import com.example.comit.ViewAdapter.RecyclerViewItem;
 import com.example.comit.ViewAdapter.UnivRecyclerViewAdapter;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -58,6 +62,7 @@ public class Univ_Frag extends Fragment {
         //subText = "내용";
 
         mAdapter.notifyDataSetChanged();
+
 
         return v;
     }

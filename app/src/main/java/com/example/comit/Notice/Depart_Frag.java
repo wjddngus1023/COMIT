@@ -19,9 +19,12 @@ import androidx.lifecycle.ViewModel;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.comit.ChatbotActivity;
 import com.example.comit.R;
 import com.example.comit.ViewAdapter.DepartRecyclerViewAdapter;
 import com.example.comit.ViewAdapter.RecyclerViewItem;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
 import org.jetbrains.annotations.NotNull;
 import org.jsoup.Jsoup;
@@ -64,6 +67,7 @@ public class Depart_Frag extends Fragment {
         mAdapter.notifyDataSetChanged();
 
         return v;
+
     }
     public class ViewHolder extends RecyclerView.ViewHolder{
 

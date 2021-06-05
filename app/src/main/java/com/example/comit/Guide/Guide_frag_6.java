@@ -1,10 +1,11 @@
-package com.example.comit.LectureEval;
+package com.example.comit.Guide;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,12 +14,11 @@ import com.example.comit.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
-public class LectureEvalActivity extends AppCompatActivity {
-
+public class Guide_frag_6 extends AppCompatActivity{
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.lectureeval_main);
+        setContentView(R.layout.guide_6);
 
         getWindow().setFlags(
                 WindowManager.LayoutParams.FLAG_FULLSCREEN,
@@ -40,6 +40,5 @@ public class LectureEvalActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
 }

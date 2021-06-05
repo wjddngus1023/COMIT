@@ -72,5 +72,28 @@
             android:textColorLink="#04A10C"
             android:textSize="24sp"
             android:textStyle="bold" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id = "@+id/fab"
+                android:layout_marginBottom="40dp"
+                android:layout_marginRight="40dp"
+                android:src = "@drawable/ic_comme"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:clickable="true"
+                android:backgroundTint="#BCCDD5">
+
+            </com.google.android.material.floatingactionbutton.FloatingActionButton>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
+
+
+
 </LinearLayout>
