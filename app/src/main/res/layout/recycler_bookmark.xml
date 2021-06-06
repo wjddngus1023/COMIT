@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="50dp"
+    android:layout_height="55dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
@@ -31,6 +31,7 @@
         android:padding="10dp"
         android:textSize="12dp"
         android:layout_marginRight="70dp"
+        android:textColor = "@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/bookmark_recycler_tv1"
         app:layout_constraintTop_toTopOf="parent"/>

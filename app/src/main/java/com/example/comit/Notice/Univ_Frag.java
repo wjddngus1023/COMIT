@@ -36,7 +36,8 @@ public class Univ_Frag extends Fragment {
     RecyclerView rv = null;
     UnivRecyclerViewAdapter mAdapter = null;
     ArrayList<RecyclerViewItem> mList;
-    String UnivURL = "https://www.hanbat.ac.kr/bbs/BBSMSTR_000000000042/list.do?mno=sub05_01";
+//    String UnivURL = "https://www.hanbat.ac.kr/bbs/BBSMSTR_000000000042/list.do?mno=sub05_01";
+    String UnivURL = "https://www.hanbat.ac.kr/bbs/BBSMSTR_000000000042/list.do?mno=sub05_01&pageUnit=200";
 
     private String mainText;
     private String subText;

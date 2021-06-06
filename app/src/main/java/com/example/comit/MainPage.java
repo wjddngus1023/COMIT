@@ -38,7 +38,7 @@ public class MainPage extends AppCompatActivity {
                 public void onClick(View view) {
                     Intent intent = new Intent(MainPage.this, NoticeActivity.class); // 페이지전환을 위한 인텐트
                     startActivity(intent);
-                    Toast.makeText(getApplicationContext(), "각 공지들을 모아볼 수 있습니다.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "부서 별로 최근 200개의 공지를 불러옵니다", Toast.LENGTH_SHORT).show();
                 }
             });
             btn_guide.setOnClickListener(new View.OnClickListener() {
