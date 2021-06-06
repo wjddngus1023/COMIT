@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="한밭대학교 컴퓨터공학과 길라잡이 앱"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        ></TextView>
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/inflearn"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center">
+
+    </ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="COM'IT"
+        android:layout_gravity="center"
+        android:textSize = "40dp"
+        android:layout_marginTop="50dp">
+
+    </TextView>
+
+</LinearLayout>
+
+

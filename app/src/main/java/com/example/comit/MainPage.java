@@ -93,4 +93,8 @@ public class MainPage extends AppCompatActivity {
                 }
             }); // 플로팅버튼 리스너
         }
+    @Override
+    public void onBackPressed() {
+        //초반 플래시 화면에서 넘어갈때 뒤로가기 버튼 못누르게 함
+    }
     }

@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
             android:ems="10"
-            android:hint="이메일"
+            android:hint="닉네임"
             android:inputType="textEmailAddress" />
 
         <EditText
@@ -72,6 +72,16 @@
             android:textColorLink="#04A10C"
             android:textSize="24sp"
             android:textStyle="bold" />
+
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="본 절차는 커뮤니티와 강의평가를 이용하기 위해 앱 설치후 최초 1회 실행됩니다 :)"
+            ></TextView>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"

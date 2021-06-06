@@ -27,6 +27,8 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 }
+apply plugin: 'com.android.application' // 파이어베이스
+apply plugin: 'com.google.gms.google-services' // 파이어베이스
 
 dependencies {
 
@@ -35,10 +37,12 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'org.jsoup:jsoup:1.11.3' // 웹 크롤링을 위한 JSoup
-    implementation "com.github.skydoves:elasticviews:2.0.9" // 엘라스틱 버튼
+    implementation "com.github.skydoves:elasticviews:2.0.9"
+    implementation 'com.google.firebase:firebase-auth:20.0.4'// 엘라스틱 버튼
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation platform('com.google.firebase:firebase-bom:28.1.0') // 파이어베이스
 
     implementation 'androidx.appcompat:appcompat:1.0.0' // v7위젯 라이브러리
 }
