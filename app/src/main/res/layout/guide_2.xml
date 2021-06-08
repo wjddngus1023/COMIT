@@ -7,11 +7,30 @@
     android:gravity="center"
     android:layout_height="match_parent">
 
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="길라잡이 2"-->
+<!--        android:textSize="30dp"/>-->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="길라잡이 2"
-        android:textSize="30dp"/>
+        android:text="2021년 기준입니다(두손가락으로 펼치면 커져요!)"
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        >
+    </TextView>
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/photo_view"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

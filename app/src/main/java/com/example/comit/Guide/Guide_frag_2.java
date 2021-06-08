@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.comit.ChatbotActivity;
 import com.example.comit.R;
+import com.github.chrisbanes.photoview.PhotoView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -30,6 +31,9 @@ public class Guide_frag_2 extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
         //상단바 제거
+
+        PhotoView photoView = (PhotoView)findViewById(R.id.photo_view);
+        photoView.setImageResource(R.drawable.school_map);
 
         Intent intent = new Intent(this, ChatbotActivity.class);
         FloatingActionButton fab = findViewById(R.id.fab);
