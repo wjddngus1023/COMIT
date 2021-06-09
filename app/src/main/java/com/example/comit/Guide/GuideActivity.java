@@ -55,7 +55,7 @@ public class GuideActivity extends AppCompatActivity {
         listview = (ListView)findViewById(R.id.guide_list);
         listview.setAdapter(adapter);
 
-        adapter.addItem(ContextCompat.getDrawable(this,R.drawable.ic_android_black_24dp),"유용한 사이트들","새내기도, 4학년도 자주쓰는 꿀사이트!");
+        adapter.addItem(ContextCompat.getDrawable(this,R.drawable.ic_useful_site),"유용한 사이트들","새내기도, 4학년도 자주쓰는 꿀사이트!");
         adapter.addItem(ContextCompat.getDrawable(this,R.drawable.ic_android_black_24dp),"한밭대동여지도","학교지리를 잘 모르신다구요?");
         adapter.addItem(ContextCompat.getDrawable(this,R.drawable.ic_android_black_24dp),"교수님 소개","분명 인사는 드렸는데..누구시지?");
         adapter.addItem(ContextCompat.getDrawable(this,R.drawable.ic_android_black_24dp),"랩실 소개","저희과는 어떤 랩실이있나요?");
