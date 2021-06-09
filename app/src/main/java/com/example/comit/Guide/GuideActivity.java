@@ -84,6 +84,7 @@ public class GuideActivity extends AppCompatActivity {
                 }
                 else if(position ==4){
                     startActivity(intent5);
+                    Toast.makeText(GuideActivity.this,"사진을 누르시면 확대/축소가 가능합니다",Toast.LENGTH_SHORT).show();
                 }
                 else if(position == 5){
                     startActivity(intent6);

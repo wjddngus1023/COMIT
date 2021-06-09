@@ -1,18 +1,23 @@
 package com.example.comit.Guide;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import com.example.comit.ChatbotActivity;
 import com.example.comit.R;
@@ -37,31 +42,48 @@ public class Guide_frag_5 extends AppCompatActivity {
         actionBar.hide();
         //상단바 제거
 
-        PhotoView photoView = (PhotoView)findViewById(R.id.photo_view);
-        photoView.setImageResource(R.drawable.jolup_2018);
-        PhotoView photoView2 = (PhotoView)findViewById(R.id.photo_view2);
-        photoView2.setImageResource(R.drawable.jolup_2019);
+        ImageView img1 = (ImageView) findViewById(R.id.photo_view1);
+        ImageView img2 = (ImageView) findViewById(R.id.photo_view2);
 
-//        LayoutInflater inflater2 = (LayoutInflater)getSystemService(LAYOUT_INFLATER_SERVICE);
-//        View popupView = inflater2.inflate(R.layout.popup_jolup18,null);
-//        int width = LinearLayout.LayoutParams.WRAP_CONTENT;
-//        int height = LinearLayout.LayoutParams.WRAP_CONTENT;
-//        boolean focusable = true;
-//        final PopupWindow popupWindow = new PopupWindow(popupView,width,height,focusable);
-//
-//        photoView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                popupWindow.showAtLocation(popupView, Gravity.CENTER,0,0);
-//            }
-//        });
-//        popupView.setOnTouchListener(new View.OnTouchListener() {
-//            @Override
-//            public boolean onTouch(View v, MotionEvent event) {
-//                popupWindow.dismiss();
-//                return true;
-//            }
-//        });
+
+        LayoutInflater layoutInflater = (LayoutInflater) getBaseContext().getSystemService(LAYOUT_INFLATER_SERVICE);
+        View popupView = layoutInflater.inflate(R.layout.popup_jolup18, null);
+        View popupView2 = layoutInflater.inflate(R.layout.popup_jolup19, null);
+        final PopupWindow popupWindow = new PopupWindow(popupView,350,350,true);
+        final PopupWindow popupWindow2 = new PopupWindow(popupView2,350,350,true);
+        popupWindow.setContentView(popupView);
+        popupWindow2.setContentView(popupView2);
+        popupWindow.setWindowLayoutMode(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        popupWindow2.setWindowLayoutMode(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+
+        img1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Guide_frag_5.this,"빈공간을 터치하면 사라집니다.",Toast.LENGTH_SHORT).show();
+                popupWindow.showAtLocation(popupView, Gravity.CENTER, 10, 10);
+            }
+        });
+        popupView.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                popupWindow.dismiss();
+                return true;
+            }
+        });
+        img2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Guide_frag_5.this,"빈공간을 터치하면 사라집니다.",Toast.LENGTH_SHORT).show();
+                popupWindow2.showAtLocation(popupView2, Gravity.CENTER, 10, 10);
+            }
+        });
+        popupView.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                popupWindow2.dismiss();
+                return true;
+            }
+        });
 
         //이부분 팝업으로 뜨게 함 해보자
 
