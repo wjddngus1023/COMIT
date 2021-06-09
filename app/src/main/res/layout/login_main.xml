@@ -14,7 +14,9 @@
         android:textColor="#050505"
         android:textColorHint="#090909"
         android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:fontFamily="@font/scdream3"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,7 +34,9 @@
             android:ems="10"
             android:hint="아이디"
             android:layout_margin="10dp"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:fontFamily="@font/scdream3"
+            />
 
         <EditText
             android:id="@+id/passwordEditText"
@@ -42,7 +46,9 @@
             android:ems="10"
             android:layout_margin="10dp"
             android:hint="비밀번호"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:fontFamily="@font/scdream3"
+            />
 
         <EditText
             android:id="@+id/passwordCheckEditText"
@@ -52,7 +58,9 @@
             android:ems="10"
             android:hint="비밀번호 확인"
             android:layout_margin="10dp"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:fontFamily="@font/scdream3"
+            />
 
         <Button
             android:id="@+id/SignUpButton"
@@ -60,6 +68,8 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#5BE6DDDD"
             android:text="회원가입"
+            android:fontFamily="@font/scdream3"
+
             android:textAllCaps="false"
             android:textColor="#000000"
             android:textColorLink="#04A10C"
@@ -75,6 +85,8 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#5BE6DDDD"
             android:text="로그인"
+            android:fontFamily="@font/scdream3"
+
             android:textColor="#000000"
             android:textColorLink="#04A10C"
             android:textSize="24sp"
@@ -92,7 +104,10 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:text="본 절차는 커뮤니티와 강의평가를 이용하기 위해 앱 설치후 최초 1회 실행됩니다 :)"
-            ></TextView>
+            android:fontFamily="@font/scdream3"
+            >
+
+        </TextView>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"

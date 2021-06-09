@@ -14,7 +14,10 @@
         android:layout_marginTop="100dp"
         android:textSize="15dp"
         android:textColor="@color/black"
-        ></TextView>
+        android:fontFamily="@font/scdream3"
+        >
+
+    </TextView>
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -30,7 +33,9 @@
         android:text="COM'IT"
         android:layout_gravity="center"
         android:textSize = "40dp"
-        android:layout_marginTop="50dp">
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/scdream3"
+        >
 
     </TextView>
 

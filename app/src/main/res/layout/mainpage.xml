@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/gradation">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -17,118 +18,93 @@
             android:layout_marginTop="40dp"
             android:gravity="center"
             android:text="COM'IT"
-            android:textSize="30dp">
+            android:textSize="30dp"
+            android:fontFamily="@font/scdream5">
         </TextView>
 
     </LinearLayout>
-    
+
     <Button
         android:id="@+id/btn_notice"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="150dp"
+        android:layout_width="350dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="100dp"
         android:scaleType="fitCenter"
-        app:layout_constraintEnd_toStartOf="@id/btn_guide"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="10dp"
 
-        android:elevation="5dp"
-        android:drawableTop="@drawable/notice_shape"
-        android:background="@drawable/main_shape" />
-
-    <TextView
-        android:id="@+id/tv_notice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:text="공지사항"
-        android:textColor="#000000"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@id/btn_notice"
-        app:layout_constraintStart_toStartOf="@id/btn_notice"
-        app:layout_constraintTop_toBottomOf="@id/btn_notice" />
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:fontFamily="@font/scdream3"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:elevation="5dp"
+        android:drawableLeft="@drawable/notice_shape"
+        android:background="@drawable/main_shape" />
 
     <Button
         android:id="@+id/btn_guide"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="350dp"
+        android:layout_height="120dp"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="@id/btn_notice"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/btn_notice"
-        app:layout_constraintTop_toTopOf="@id/btn_notice"
+        android:layout_marginTop="20dp"
 
-        android:elevation="5dp"
-        android:drawableTop="@drawable/guide_shape"
+        android:text="길라잡이"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:fontFamily="@font/scdream3"
+
+        app:layout_constraintTop_toBottomOf="@id/btn_notice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:elevation="5dp"
+        android:drawableLeft="@drawable/guide_shape"
         android:background="@drawable/main_shape"
         />
-
-    <TextView
-        android:id="@+id/tv_guide"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="길라잡이"
-        android:textColor="#000000"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@id/btn_guide"
-        app:layout_constraintStart_toStartOf="@id/btn_guide"
-        app:layout_constraintTop_toBottomOf="@id/btn_guide" />
 
     <Button
         android:id="@+id/btn_community"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="45dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintEnd_toStartOf="@id/btn_guide"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_notice"
-
-        android:paddingTop="8dp"
-        android:elevation="5dp"
-        android:drawableTop="@drawable/community_shape"
+        android:layout_width="350dp"
+        android:layout_height="120dp"
         android:background="@drawable/main_shape"
-        />
-
-    <TextView
-        android:id="@+id/tv_community"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/community_shape"
+        android:paddingTop="8dp"
+        android:scaleType="fitCenter"
         android:layout_marginTop="20dp"
+
         android:text="커뮤니티"
-        android:textColor="#000000"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@id/btn_community"
-        app:layout_constraintStart_toStartOf="@id/btn_community"
-        app:layout_constraintTop_toBottomOf="@id/btn_community" />
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:fontFamily="@font/scdream3"
+
+        app:elevation="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_guide" />
 
     <Button
         android:id="@+id/btn_lecture"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintTop_toTopOf="@id/btn_community"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/btn_notice"
-
-        android:paddingTop="8dp"
-        android:elevation="5dp"
-        android:drawableTop="@drawable/lectureeval_shape"
+        android:layout_width="350dp"
+        android:layout_height="120dp"
         android:background="@drawable/main_shape"
-        />
-
-    <TextView
-        android:id="@+id/tv_lecture"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/lectureeval_shape"
+        android:paddingTop="8dp"
         android:layout_marginTop="20dp"
         android:text="강의평가"
-        android:textColor="#000000"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@id/btn_lecture"
-        app:layout_constraintStart_toStartOf="@id/btn_lecture"
-        app:layout_constraintTop_toBottomOf="@id/btn_lecture" />
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:fontFamily="@font/scdream3"
+
+        android:scaleType="fitCenter"
+        app:elevation="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_community" />
+
 
     <Button
         android:id="@+id/btn_settings"

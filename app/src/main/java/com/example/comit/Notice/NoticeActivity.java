@@ -15,6 +15,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 import com.example.comit.ChatbotActivity;
 import com.example.comit.R;
@@ -63,7 +64,7 @@ public class NoticeActivity extends AppCompatActivity {
 //
 //
 //    }
-
+//
 //    private void BottomNavigate(int id) {
 //
 //        String tag = String.valueOf(id);
@@ -95,8 +96,8 @@ public class NoticeActivity extends AppCompatActivity {
 //        fragmentTransaction.setReorderingAllowed(true);
 //        fragmentTransaction.commitNow();
 //
-//
-//
+
+
 //    }
 
 

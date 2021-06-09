@@ -3,5 +3,7 @@
     <item
         android:drawable="@drawable/ic_notepad"
         android:width="60dp"
-        android:height="50dp"/>
+        android:height="50dp"
+        android:left="20dp"
+        android:right="-80dp"/>
 </layer-list>

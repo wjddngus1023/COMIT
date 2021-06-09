@@ -13,6 +13,7 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/scdream3"
         />
     <View
         android:layout_width="1dp"
@@ -30,6 +31,8 @@
         android:maxLines="2"
         android:padding="10dp"
         android:textSize="12dp"
+        android:fontFamily="@font/scdream3"
+
         android:layout_marginRight="70dp"
         app:layout_constraintEnd_toEndOf="parent"
         android:textColor = "@color/black"
@@ -47,6 +50,8 @@
         android:layout_width="80dp"
         android:layout_height="match_parent"
         android:gravity="bottom"
+        android:fontFamily="@font/scdream3"
+
         android:id="@+id/groupnotice_recycler_tv3"
         app:layout_constraintEnd_toEndOf="parent"
         />

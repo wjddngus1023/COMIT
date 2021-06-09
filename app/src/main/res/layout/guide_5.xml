@@ -19,6 +19,8 @@
         android:text="18학번(2022년 졸업생) 기준"
         android:textColor="@color/black"
         android:textSize="17dp"
+        android:fontFamily="@font/scdream3"
+
         android:layout_marginTop="40dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
@@ -39,6 +41,8 @@
         android:text="19학번~기준(심화과정적용)"
         android:textColor="@color/black"
         android:textSize="17dp"
+        android:fontFamily="@font/scdream3"
+
         android:layout_marginTop="40dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"

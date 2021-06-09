@@ -14,11 +14,9 @@
         android:layout_height="match_parent"
         android:clipToPadding="false"
         android:orientation="vertical"
-        android:background="@drawable/listview_shape"
+        android:background="@drawable/gradation"
         android:paddingTop="15dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        >
-
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
     </androidx.recyclerview.widget.RecyclerView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
