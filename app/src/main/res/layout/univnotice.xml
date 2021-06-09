@@ -9,11 +9,13 @@
     android:layout_height="match_parent">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/univnotice"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/univnotice"
         android:clipToPadding="false"
         android:orientation="vertical"
+        android:background="@drawable/listview_shape"
+        android:paddingTop="15dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         >
 

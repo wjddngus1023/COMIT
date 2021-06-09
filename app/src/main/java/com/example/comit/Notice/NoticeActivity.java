@@ -50,6 +50,16 @@ public class NoticeActivity extends AppCompatActivity {
         BottomNav.setSelectedItemId(R.id.navigation_1);
 
 
+        Intent intent = new Intent(this, ChatbotActivity.class);
+        FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "챗봇 커미를 부릅니다", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+                startActivity(intent);
+            }
+        });
     }
 
     private void BottomNavigate(int id) {

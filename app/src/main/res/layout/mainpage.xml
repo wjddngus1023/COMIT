@@ -7,20 +7,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:text="COM'IT"
-        android:gravity="center"
-        android:textSize="30dp"
-        android:layout_marginTop="40dp"
-        >
-
-    </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="COM'IT"
+            android:textSize="30dp">
+        </TextView>
 
     </LinearLayout>
     
@@ -33,8 +31,10 @@
         app:layout_constraintEnd_toStartOf="@id/btn_guide"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/ic_notice"
-        />
+
+        android:elevation="5dp"
+        android:drawableTop="@drawable/notice_shape"
+        android:background="@drawable/main_shape" />
 
     <TextView
         android:id="@+id/tv_notice"
@@ -57,7 +57,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/btn_notice"
         app:layout_constraintTop_toTopOf="@id/btn_notice"
-        android:background="@drawable/ic_bulb"/>
+
+        android:elevation="5dp"
+        android:drawableTop="@drawable/guide_shape"
+        android:background="@drawable/main_shape"
+        />
 
     <TextView
         android:id="@+id/tv_guide"
@@ -75,12 +79,17 @@
         android:id="@+id/btn_community"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="45dp"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toStartOf="@id/btn_guide"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_notice"
-        android:background="@drawable/ic_letterballoon"/>
+
+        android:paddingTop="8dp"
+        android:elevation="5dp"
+        android:drawableTop="@drawable/community_shape"
+        android:background="@drawable/main_shape"
+        />
 
     <TextView
         android:id="@+id/tv_community"
@@ -102,7 +111,12 @@
         app:layout_constraintTop_toTopOf="@id/btn_community"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/btn_notice"
-        android:background="@drawable/ic_notepad"/>
+
+        android:paddingTop="8dp"
+        android:elevation="5dp"
+        android:drawableTop="@drawable/lectureeval_shape"
+        android:background="@drawable/main_shape"
+        />
 
     <TextView
         android:id="@+id/tv_lecture"
@@ -118,26 +132,28 @@
 
     <Button
         android:id="@+id/btn_settings"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="60dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintEnd_toStartOf="@id/btn_guide"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_community"
-        android:background="@drawable/ic_settings"/>
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/setting_shape"
 
-    <TextView
-        android:id="@+id/tv_settings"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="설정"
-        android:textColor="#000000"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@id/btn_community"
-        app:layout_constraintStart_toStartOf="@id/btn_community"
-        app:layout_constraintTop_toBottomOf="@id/btn_settings" />
+        android:scaleType="fitCenter"
+        app:backgroundTint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_settings"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:text="설정"-->
+<!--        android:textColor="#000000"-->
+<!--        android:textSize="14sp"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/btn_community"-->
+<!--        app:layout_constraintStart_toStartOf="@id/btn_community"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/btn_settings" />-->
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="60dp"
@@ -150,10 +166,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:clickable="true"
-        android:backgroundTint="#BCCDD5"
-
-        >
-
+        android:backgroundTint="#BCCDD5">
     </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

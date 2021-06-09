@@ -8,16 +8,73 @@
     android:gravity="center"
     android:layout_height="match_parent">
 
+<!--    <TextView-->
+<!--        android:layout_width="50dp"-->
+<!--        android:layout_height="65dp"-->
+<!--        android:gravity="center"-->
+<!--        android:id="@+id/departnotice_recycler_tv1"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textStyle="bold"-->
+<!--        android:text="번호"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        />-->
+
+<!--    <TextView-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="35dp"-->
+<!--        android:id="@+id/departnotice_recycler_tv2"-->
+<!--        android:ellipsize="end"-->
+<!--        android:maxLines="1"-->
+<!--        android:paddingTop="10dp"-->
+<!--        android:paddingLeft="10dp"-->
+<!--        android:textSize="15dp"-->
+<!--        android:text="제목"-->
+<!--        android:textColor = "@color/black"-->
+<!--        android:layout_marginRight="0dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/departnotice_recycler_tv1"-->
+<!--        app:layout_constraintTop_toTopOf="parent"/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/departnotice_recycler_tv3"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="30dp"-->
+<!--        android:layout_marginRight="0dp"-->
+<!--        android:gravity="bottom"-->
+<!--        android:paddingLeft="10dp"-->
+<!--        android:paddingBottom="10dp"-->
+<!--        android:textSize="13dp"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/departnotice_recycler_tv1"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/departnotice_recycler_tv2"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        />-->
+
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/departnotice"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/departnotice"
         android:clipToPadding="false"
         android:orientation="vertical"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        >
-
+        android:background="@drawable/listview_shape"
+        android:paddingTop="15dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
     </androidx.recyclerview.widget.RecyclerView>
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:layout_width="60dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:id = "@+id/fab"-->
+<!--        android:layout_marginBottom="20dp"-->
+<!--        android:layout_marginRight="20dp"-->
+<!--        android:src = "@drawable/ic_comme"-->
+<!--        android:scaleType="fitCenter"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        android:clickable="true"-->
+<!--        android:background="@drawable/chatbot_shape"-->
+<!--        android:focusable="true">-->
+<!--    </com.google.android.material.floatingactionbutton.FloatingActionButton>-->
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
