@@ -18,7 +18,7 @@
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:background="@drawable/inflearn"
+        android:background="@drawable/ic_comme"
         android:layout_marginTop="100dp"
         android:layout_gravity="center">
 

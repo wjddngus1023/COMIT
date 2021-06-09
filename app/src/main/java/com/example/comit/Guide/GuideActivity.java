@@ -1,11 +1,13 @@
 package com.example.comit.Guide;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -52,13 +54,14 @@ public class GuideActivity extends AppCompatActivity {
 
         listview = (ListView)findViewById(R.id.guide_list);
         listview.setAdapter(adapter);
-        
-        adapter.addItem(ContextCompat.getDrawable(this,R.drawable.ic_android_black_24dp),"유용한 사이트들","새내기도, 4학년도 자주쓰는 꿀사이트!");
+
+        adapter.addItem(ContextCompat.getDrawable(this,R.drawable.ic_useful_site),"유용한 사이트들","새내기도, 4학년도 자주쓰는 꿀사이트!");
         adapter.addItem(ContextCompat.getDrawable(this,R.drawable.ic_android_black_24dp),"한밭대동여지도","학교지리를 잘 모르신다구요?");
         adapter.addItem(ContextCompat.getDrawable(this,R.drawable.ic_android_black_24dp),"교수님 소개","분명 인사는 드렸는데..누구시지?");
         adapter.addItem(ContextCompat.getDrawable(this,R.drawable.ic_android_black_24dp),"랩실 소개","저희과는 어떤 랩실이있나요?");
         adapter.addItem(ContextCompat.getDrawable(this,R.drawable.ic_android_black_24dp),"학번별 졸업 요건","5학년이 되고 싶지 않다면 필수!");
         adapter.addItem(ContextCompat.getDrawable(this,R.drawable.ic_android_black_24dp),"필수 교양 목록","미리미리 꼭 들어야할 필수 교양!");
+
 
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -69,6 +72,7 @@ public class GuideActivity extends AppCompatActivity {
                 }
                 else if(position == 1){
                     startActivity(intent2);
+                    Toast.makeText(GuideActivity.this,"2021년 상반기 기준입니다",Toast.LENGTH_SHORT).show();
                 }
                 else if(position == 2){
                     startActivity(intent3);
@@ -76,9 +80,11 @@ public class GuideActivity extends AppCompatActivity {
                 }
                 else if(position ==3){
                     startActivity(intent4);
+                    Toast.makeText(GuideActivity.this,"2021년 상반기 기준입니다",Toast.LENGTH_SHORT).show();
                 }
                 else if(position ==4){
                     startActivity(intent5);
+                    Toast.makeText(GuideActivity.this,"사진을 누르시면 확대/축소가 가능합니다",Toast.LENGTH_SHORT).show();
                 }
                 else if(position == 5){
                     startActivity(intent6);

@@ -7,23 +7,18 @@
     android:orientation="vertical"
     tools:context=".Notice.NoticeActivity">
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top"
-        app:elevation="0dp"
-        android:background="?android:attr/windowBackground"
-        app:itemIconTint="@color/menu_selector_color"
-        app:itemTextColor="@color/menu_selector_color"
-        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
-        app:menu="@layout/bottom_nav" />
 
     <FrameLayout
         android:id="@+id/content_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1" >
+
+        <androidx.viewpager2.widget.ViewPager2
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -40,11 +35,23 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:clickable="true"
-                android:background="@drawable/main_shape">
+                android:backgroundTint="#BCCDD5">
+
             </com.google.android.material.floatingactionbutton.FloatingActionButton>
-
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </FrameLayout>
+
+<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--        android:id="@+id/nav_view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="bottom"-->
+<!--        android:background="?android:attr/windowBackground"-->
+<!--        app:itemIconTint="@color/menu_selector_color"-->
+<!--        app:itemTextColor="@color/menu_selector_color"-->
+<!--        app:menu="@layout/bottom_nav"-->
+<!--        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"/>-->
+
+
 
 </LinearLayout>

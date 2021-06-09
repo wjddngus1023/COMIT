@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="100dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="100dp">
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:src="@drawable/jolup_2018" >
+    </com.github.chrisbanes.photoview.PhotoView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
