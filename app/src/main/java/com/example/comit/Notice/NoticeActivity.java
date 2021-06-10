@@ -15,6 +15,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.comit.ChatbotActivity;
@@ -22,6 +23,13 @@ import com.example.comit.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
+
+import org.jetbrains.annotations.NotNull;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class NoticeActivity extends AppCompatActivity {
     private BottomNavigationView BottomNav;
@@ -48,6 +56,19 @@ public class NoticeActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.pager);
         pagerAdapter = new ScreenSlidePagerAdapter(this);
         viewPager.setAdapter(pagerAdapter);
+
+        TabLayout tabLayout = findViewById(R.id.tab_layout);
+
+        final List<String> tabElement = Arrays.asList("\t학과공지","\t학교공지","학생회공지","\t북마크");
+
+        new TabLayoutMediator(tabLayout, viewPager, new TabLayoutMediator.TabConfigurationStrategy() {
+            @Override
+            public void onConfigureTab(@NonNull @NotNull TabLayout.Tab tab, int position) {
+                TextView tv = new TextView(NoticeActivity.this);
+                tv.setText(tabElement.get(position));
+                tab.setCustomView(tv);
+            }
+        }).attach();
 
 
 //        BottomNav = findViewById(R.id.nav_view);
@@ -112,6 +133,7 @@ public class NoticeActivity extends AppCompatActivity {
             }
         });
     }
+
 
     @Override
     public void onBackPressed() {

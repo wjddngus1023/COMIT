@@ -7,6 +7,16 @@
     android:orientation="vertical"
     tools:context=".Notice.NoticeActivity">
 
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:fontFamily="@font/scdream3"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/black"
+        />
 
     <FrameLayout
         android:id="@+id/content_layout"
