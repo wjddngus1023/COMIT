@@ -43,6 +43,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation platform('com.google.firebase:firebase-bom:28.1.0') // 파이어베이스
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0' // 포토 줌인 줌아웃
 
     implementation 'com.github.chrisbanes:PhotoView:2.3.0' // 포토뷰
 
