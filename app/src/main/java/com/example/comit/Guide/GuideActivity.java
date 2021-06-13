@@ -55,12 +55,12 @@ public class GuideActivity extends AppCompatActivity {
         listview = (ListView)findViewById(R.id.guide_list);
         listview.setAdapter(adapter);
 
-        adapter.addItem(ContextCompat.getDrawable(this,R.drawable.ic_useful_site),"유용한 사이트들","새내기도, 4학년도 자주쓰는 꿀사이트!");
-        adapter.addItem(ContextCompat.getDrawable(this,R.drawable.ic_android_black_24dp),"한밭대동여지도","학교지리를 잘 모르신다구요?");
-        adapter.addItem(ContextCompat.getDrawable(this,R.drawable.ic_android_black_24dp),"교수님 소개","분명 인사는 드렸는데..누구시지?");
-        adapter.addItem(ContextCompat.getDrawable(this,R.drawable.ic_android_black_24dp),"랩실 소개","저희과는 어떤 랩실이있나요?");
-        adapter.addItem(ContextCompat.getDrawable(this,R.drawable.ic_android_black_24dp),"학번별 졸업 요건","5학년이 되고 싶지 않다면 필수!");
-        adapter.addItem(ContextCompat.getDrawable(this,R.drawable.ic_android_black_24dp),"필수 교양 목록","미리미리 꼭 들어야할 필수 교양!");
+        adapter.addItem(ContextCompat.getDrawable(this,R.drawable.ic_website),"유용한 사이트들","새내기도, 4학년도 자주쓰는 꿀사이트!");
+        adapter.addItem(ContextCompat.getDrawable(this,R.drawable.ic_map_icon),"한밭대동여지도","학교지리를 잘 모르신다구요?");
+        adapter.addItem(ContextCompat.getDrawable(this,R.drawable.ic_professor),"교수님 소개","분명 인사는 드렸는데..누구시지?");
+        adapter.addItem(ContextCompat.getDrawable(this,R.drawable.ic_lab),"랩실 소개","저희과는 어떤 랩실이있나요?");
+        adapter.addItem(ContextCompat.getDrawable(this,R.drawable.ic_list),"학번별 졸업 요건","5학년이 되고 싶지 않다면 필수!");
+        adapter.addItem(ContextCompat.getDrawable(this,R.drawable.ic_list_2),"필수 교양 목록","미리미리 꼭 들어야할 필수 교양!");
 
 
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
