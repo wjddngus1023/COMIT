@@ -5,20 +5,32 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.NavController;
+import androidx.navigation.NavDestination;
+import androidx.navigation.Navigation;
 
 import com.example.comit.ChatbotActivity;
 import com.example.comit.R;
+import com.example.comit.databinding.CommunityMainBinding;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
 public class CommunityActivity extends AppCompatActivity {
 
+    private FloatingActionButton fab2;
+    private NavController navController;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.community_main);
+        CommunityMainBinding binding = CommunityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        fab2 = binding.fab2;
 
         getWindow().setFlags(
                 WindowManager.LayoutParams.FLAG_FULLSCREEN,
@@ -29,6 +41,25 @@ public class CommunityActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
         //상단바 제거
+
+        navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+        navController.setGraph(R.navigation.nav_graph_java);
+        navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
+            @Override
+            public void onDestinationChanged(@NonNull NavController controller, @NonNull NavDestination destination, @Nullable Bundle arguments) {
+                if (destination.getId() == R.id.MainFragment) {
+                    fab2.setVisibility(View.VISIBLE);
+                    fab2.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            navController.navigate(R.id.action_MainFragment_to_NewPostFragment);
+                        }
+                    });
+                } else {
+                    fab2.setVisibility(View.GONE);
+                }
+            }
+        });
 
         Intent intent = new Intent(this, ChatbotActivity.class);
         FloatingActionButton fab = findViewById(R.id.fab);

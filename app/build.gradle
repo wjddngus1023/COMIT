@@ -4,7 +4,15 @@ plugins {
 
 android {
     compileSdkVersion 29
-    buildToolsVersion '29.0.3'
+    buildToolsVersion '30.0.2'
+
+    buildFeatures{
+        dataBinding = true
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
 
     defaultConfig {
         applicationId "com.example.comit"
@@ -38,7 +46,9 @@ dependencies {
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'org.jsoup:jsoup:1.11.3' // 웹 크롤링을 위한 JSoup
     implementation "com.github.skydoves:elasticviews:2.0.9"
-    implementation 'com.google.firebase:firebase-auth:20.0.4'// 엘라스틱 버튼
+    implementation 'com.google.firebase:firebase-auth:20.0.4'
+    implementation 'com.google.firebase:firebase-firestore:23.0.1'
+    implementation 'androidx.navigation:navigation-fragment:2.3.5'// 엘라스틱 버튼
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
@@ -48,4 +58,14 @@ dependencies {
     implementation 'com.github.chrisbanes:PhotoView:2.3.0' // 포토뷰
 
     implementation 'androidx.appcompat:appcompat:1.0.0' // v7위젯 라이브러리
+
+    implementation platform('com.google.firebase:firebase-bom:28.4.2') // realtime database
+    implementation 'com.google.firebase:firebase-database' // realtime database
+
+    implementation 'com.firebaseui:firebase-ui-database:6.0.2' //realtime database
+
+    implementation 'com.google.firebase:firebase-messaging'
+    implementation 'com.google.firebase:firebase-analytics'
+
+
 }

@@ -11,12 +11,12 @@
         android:id="@+id/guide_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingTop="30dp"
+        android:paddingTop="100dp"
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
 
 
-        android:dividerHeight="10dp" />
+        android:dividerHeight="20dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"

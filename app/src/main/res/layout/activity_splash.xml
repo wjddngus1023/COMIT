@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:text="한밭대학교 컴퓨터공학과 길라잡이 앱"
         android:layout_gravity="center"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="150dp"
         android:textSize="15dp"
         android:textColor="@color/black"
         android:fontFamily="@font/scdream3"
