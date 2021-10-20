@@ -145,7 +145,7 @@ public class PostDetailFragment extends com.example.comit.Community.BaseFragment
 
                     @Override
                     public void onCancelled(DatabaseError databaseError) {
-
+                        Log.d(TAG, "database error");
                     }
                 });
     }

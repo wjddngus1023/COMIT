@@ -61,6 +61,9 @@ public class CommunityActivity extends AppCompatActivity {
             }
         });
 
+        //onbackpressed를넣어서 오류처리해야될까
+
+
         Intent intent = new Intent(this, ChatbotActivity.class);
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

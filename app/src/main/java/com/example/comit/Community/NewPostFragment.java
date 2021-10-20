@@ -1,4 +1,5 @@
 package com.example.comit.Community;
+
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -9,18 +10,18 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 
+import com.example.comit.Community.models.Post;
+import com.example.comit.Community.models.User;
+import com.example.comit.R;
+import com.example.comit.databinding.FragmentNewPostBinding;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.example.comit.R;
-import com.example.comit.Community.models.User;
-import com.example.comit.Community.models.Post;
-
-import com.example.comit.databinding.FragmentNewPostBinding;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -32,6 +33,7 @@ public class NewPostFragment extends BaseFragment {
     private DatabaseReference mDatabase;
 
     private FragmentNewPostBinding binding;
+    private NavController navController;
 
     @Nullable
     @Override
@@ -71,7 +73,7 @@ public class NewPostFragment extends BaseFragment {
 
         // Disable button so there are no multi-posts
         setEditingEnabled(false);
-        Toast.makeText(getContext(), "Posting...", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(), "게시중입니다...", Toast.LENGTH_SHORT).show();
 
         final String userId = getUid();
         mDatabase.child("users").child(userId).addListenerForSingleValueEvent(
@@ -105,6 +107,8 @@ public class NewPostFragment extends BaseFragment {
                 });
     }
 
+
+
     private void setEditingEnabled(boolean enabled) {
         binding.fieldTitle.setEnabled(enabled);
         binding.fieldBody.setEnabled(enabled);
@@ -128,4 +132,6 @@ public class NewPostFragment extends BaseFragment {
 
         mDatabase.updateChildren(childUpdates);
     }
+
 }
+

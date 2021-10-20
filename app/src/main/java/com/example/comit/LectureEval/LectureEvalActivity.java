@@ -30,6 +30,7 @@ public class LectureEvalActivity extends AppCompatActivity {
         actionBar.hide();
         //상단바 제거
 
+
         Intent intent = new Intent(this, ChatbotActivity.class);
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
