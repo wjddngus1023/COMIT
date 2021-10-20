@@ -19,6 +19,8 @@ import com.example.comit.databinding.CommunityMainBinding;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+
+
 public class CommunityActivity extends AppCompatActivity {
 
     private FloatingActionButton fab2;
@@ -75,5 +77,14 @@ public class CommunityActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (navController.getCurrentDestination().getId() == R.id.MainFragment) {
+            super.onBackPressed();
+        } else {
+            navController.navigate(R.id.MainFragment);
+        }
     }
 }

@@ -33,6 +33,8 @@ public class MainFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+
+
         // Create the adapter that will return a fragment for each section
         FragmentStateAdapter mPagerAdapter = new FragmentStateAdapter(getParentFragmentManager(),
                 getViewLifecycleOwner().getLifecycle()) {
