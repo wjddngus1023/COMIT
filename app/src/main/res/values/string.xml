@@ -15,4 +15,8 @@
     <string name="heading_recent">최근 게시물</string>
     <string name="heading_my_posts">내가 쓴 글</string>
     <string name="heading_my_top_posts">내가 쓴 인기글</string>
+    <string name="firstgrade">1학년</string>
+    <string name="secondgrade">2학년</string>
+    <string name="thirdgrade">3학년</string>
+    <string name="fourthgrade">4학년</string>
 </resources>
