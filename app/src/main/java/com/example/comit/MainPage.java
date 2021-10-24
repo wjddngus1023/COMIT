@@ -14,7 +14,6 @@ import com.example.comit.Community.CommunityActivity;
 import com.example.comit.Guide.GuideActivity;
 import com.example.comit.LectureEval.LectureEvalActivity;
 import com.example.comit.Notice.NoticeActivity;
-import com.example.comit.Settings.SettingsActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -29,7 +28,7 @@ public class MainPage extends AppCompatActivity {
             Button btn_community = findViewById(R.id.btn_community);
             Button btn_guide = findViewById(R.id.btn_guide);
             Button btn_lecture = findViewById(R.id.btn_lecture);
-            Button btn_settings = findViewById(R.id.btn_settings);
+            //Button btn_settings = findViewById(R.id.btn_settings);
 
             Intent intent = new Intent(this, ChatbotActivity.class);
 
@@ -62,13 +61,13 @@ public class MainPage extends AppCompatActivity {
                     startActivity(intent);
                 }
             });
-            btn_settings.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(MainPage.this, SettingsActivity.class);
-                    startActivity(intent);
-                }
-            });
+//            btn_settings.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    Intent intent = new Intent(MainPage.this, SettingsActivity.class);
+//                    startActivity(intent);
+//                }
+//            });
 
 
             getWindow().setFlags(

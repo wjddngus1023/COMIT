@@ -23,11 +23,11 @@
             />
 
         <ImageView
-            android:id="@+id/star2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/stars2"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:background="?attr/selectableItemBackground"
-            android:src="@drawable/ic_toggle_star_24"
+            android:src="@drawable/good"
             app:layout_constraintBottom_toBottomOf="@+id/postAuthorLayout2"
             app:layout_constraintEnd_toStartOf="@+id/postNumStars2"
             app:layout_constraintTop_toTopOf="@+id/postAuthorLayout2" />
@@ -36,10 +36,12 @@
             android:id="@+id/postNumStars2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="@+id/star2"
+            app:layout_constraintBottom_toBottomOf="@+id/stars2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/star2"
-            tools:text="4.7" />
+            app:layout_constraintTop_toTopOf="@+id/stars2"
+            tools:text="8" />
+
+
 
         <include
             layout="@layout/include_post_text_2"

@@ -17,19 +17,21 @@ public class Post2 {
 
     public String name = "강의 이름";
     public int stars = 0;
-    public int votes = 0;
-    public double avgstars = 0;
+    public int grade = 0;
+//    public int votes = 0;
+//    public double avgstars = 0;
 
 
     public Post2() {
         // Default constructor required for calls to DataSnapshot.getValue(Post.class)
     }
 
-    public Post2(String name, int stars, int votes, double avgstars) {
+    public Post2(String name, int stars, int grade) {
         this.name = name;
         this.stars = stars;
-        this.votes = votes;
-        this.avgstars = avgstars;
+        this.grade = grade;
+//        this.votes = votes;
+//        this.avgstars = avgstars;
     }
 
     @Exclude
@@ -37,8 +39,9 @@ public class Post2 {
         HashMap<String, Object> result = new HashMap<>();
         result.put("name",name);
         result.put("stars",stars);
-        result.put("votes",votes);
-        result.put("avgstars",stars/votes);
+        result.put("grade",grade);
+//        result.put("votes",votes);
+//        result.put("avgstars",stars/votes);
 //        result.put("uid", uid);
 //        result.put("author", author);
 //        result.put("title", title);

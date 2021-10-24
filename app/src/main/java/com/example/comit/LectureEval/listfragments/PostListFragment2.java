@@ -1,6 +1,7 @@
 package com.example.comit.LectureEval.listfragments;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,9 +19,13 @@ import com.example.comit.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.MutableData;
 import com.google.firebase.database.Query;
+import com.google.firebase.database.Transaction;
 
 public abstract class PostListFragment2 extends Fragment {
 
@@ -99,20 +104,20 @@ public abstract class PostListFragment2 extends Fragment {
 //                if (model.stars.containsKey(getUid())) {
 //                    viewHolder.starView.setImageResource(R.drawable.ic_toggle_star_24);
 //                } else {
-                    viewHolder.starView.setImageResource(R.drawable.ic_toggle_star_24);
+                    viewHolder.starView.setImageResource(R.drawable.good);
                 //}
 
                 // Bind Post to ViewHolder, setting OnClickListener for the star button
                 viewHolder.bindToPost(model, new View.OnClickListener() {
                     @Override
                     public void onClick(View starView) {
-//                        // Need to write to both places the post is stored
-//                        DatabaseReference globalPostRef = mDatabase.child("posts").child(postRef.getKey());
-//                        DatabaseReference userPostRef = mDatabase.child("user-posts").child(model.uid).child(postRef.getKey());
-//
-//                        // Run two transactions
-//                        onStarClicked(globalPostRef);
-//                        onStarClicked(userPostRef);
+                        // Need to write to both places the post is stored
+                        DatabaseReference globalPostRef = mDatabase.child("Lectures").child(postRef.getKey());
+                        //DatabaseReference userPostRef = mDatabase.child("user-posts").child(model.uid).child(postRef.getKey());
+
+                        // Run two transactions
+                        onStarClicked(globalPostRef);
+                        //onStarClicked(userPostRef);
                     }
                 });
             }
@@ -120,16 +125,16 @@ public abstract class PostListFragment2 extends Fragment {
         mRecycler.setAdapter(mAdapter);
     }
 
-    // [START post_stars_transaction]
-//    private void onStarClicked(DatabaseReference postRef) {
-//        postRef.runTransaction(new Transaction.Handler() {
-//            @Override
-//            public Transaction.Result doTransaction(MutableData mutableData) {
-//                Post2 p = mutableData.getValue(Post2.class);
-//                if (p == null) {
-//                    return Transaction.success(mutableData);
-//                }
-//
+     //[START post_stars_transaction]
+    private void onStarClicked(DatabaseReference postRef) {
+        postRef.runTransaction(new Transaction.Handler() {
+            @Override
+            public Transaction.Result doTransaction(MutableData mutableData) {
+                Post2 p = mutableData.getValue(Post2.class);
+                if (p == null) {
+                    return Transaction.success(mutableData);
+                }
+
 //                if (p.stars.containsKey(getUid())) {
 //                    // Unstar the post and remove self from stars
 ////                    p.starCount = p.starCount - 1;
@@ -140,20 +145,24 @@ public abstract class PostListFragment2 extends Fragment {
 ////                    p.starCount = p.starCount + 1;
 ////                    p.stars.put(getUid(), true);
 //                }
-//
-//                // Set value and report transaction success
-//                mutableData.setValue(p);
-//                return Transaction.success(mutableData);
-//            }
-//
-//            @Override
-//            public void onComplete(DatabaseError databaseError, boolean committed,
-//                                   DataSnapshot currentData) {
-//                // Transaction completed
-//                Log.d(TAG, "postTransaction:onComplete:" + databaseError);
-//            }
-//        });
-//    }
+                   p.stars = p.stars + 1;
+                   p.grade = p.grade;
+                  // p.stars.put(getUid(), true);
+
+                // Set value and report transaction success
+                mutableData.setValue(p);
+                return Transaction.success(mutableData);
+            }
+
+            @Override
+            public void onComplete(DatabaseError databaseError, boolean committed,
+                                   DataSnapshot currentData) {
+                // Transaction completed
+                Log.d(TAG, "postTransaction:onComplete:" + databaseError);
+            }
+        });
+    }
+
     // [END post_stars_transaction]
 
 

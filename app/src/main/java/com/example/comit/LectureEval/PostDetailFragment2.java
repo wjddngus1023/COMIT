@@ -42,11 +42,14 @@ public class PostDetailFragment2 extends com.example.comit.LectureEval.BaseFragm
     private CommentAdapter mAdapter;
 
     private FragmentPostDetail2Binding binding;
+    private DatabaseReference mDatabase;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = FragmentPostDetail2Binding.inflate(inflater, container, false);
+
+        mDatabase = FirebaseDatabase.getInstance().getReference();
         return binding.getRoot();
     }
 
@@ -64,10 +67,17 @@ public class PostDetailFragment2 extends com.example.comit.LectureEval.BaseFragm
 //        mPostReference = FirebaseDatabase.getInstance().getReference()
 //                .child("Lectures").child(mPostKey); // original
         mPostReference = FirebaseDatabase.getInstance().getReference()
-                .child("Lectures").child(mPostKey); // 여기바꿧음, 근데 네개 다되게 하려면 어케어케해야됨, 걍 한개로 합쳐?ㅅㅂ
+                .child("Lectures").child(mPostKey); // 여기바꿧음
         mCommentsReference = FirebaseDatabase.getInstance().getReference()
                 .child("post-comments").child(mPostKey);
-
+//        DatabaseReference starRef = mDatabase.child("Lectures").getRef();
+//        binding.buttonrating.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Log.d(TAG,"hel;lo");
+//                postStar(starRef);
+//            }
+//        });
         binding.buttonPostComment2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -76,6 +86,7 @@ public class PostDetailFragment2 extends com.example.comit.LectureEval.BaseFragm
         });
         binding.recyclerPostComments2.setLayoutManager(new LinearLayoutManager(getContext()));
     }
+
 
     @Override
     public void onStart() {
@@ -90,9 +101,9 @@ public class PostDetailFragment2 extends com.example.comit.LectureEval.BaseFragm
                 //binding.postAuthorLayout.postAuthor.setText(post.name);
                 binding.postTextLayout2.postTitle2.setText(post.name);
                 //binding.postTextLayout.postBody.setText(post.body);
-                binding.averageNum.setText(String.valueOf(post.avgstars));
-                float rate = Float.valueOf(String.valueOf(post.avgstars));
-                binding.average2.setRating(rate);
+//                binding.averageNum.setText(String.valueOf(post.avgstars));
+//                float rate = Float.valueOf(String.valueOf(post.avgstars));
+//                binding.average2.setRating(rate);
 
             }
 
@@ -276,4 +287,28 @@ public class PostDetailFragment2 extends com.example.comit.LectureEval.BaseFragm
         }
 
     }
+//    private void postStar(DatabaseReference PostRef) {
+//        PostRef.runTransaction(new Transaction.Handler() {
+//            @NonNull
+//            @Override
+//            public Transaction.Result doTransaction(@NonNull MutableData mutableData) {
+//                Post2 p = mutableData.getValue(Post2.class);
+//                float rate = binding.setrating.getRating();
+//                if (p == null) {
+//                    return Transaction.success(mutableData);
+//                } else {
+//                    p.stars = p.stars + rate;
+//                    p.votes = p.votes + 1;
+//
+//                }
+//                //mutableData.setValue(p);
+//                return Transaction.success(mutableData);
+//            }
+//
+//            @Override
+//            public void onComplete(@Nullable DatabaseError error, boolean committed, @Nullable DataSnapshot currentData) {
+//                Log.d(TAG,"database error");
+//            }
+//        });
+//    }
 }

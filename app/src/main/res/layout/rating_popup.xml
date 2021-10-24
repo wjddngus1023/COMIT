@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvSample"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="해당 강의의 추천도를 작성해주세요!"
+            android:textColor="@android:color/black"
+            android:textSize="15dp" />
+
+        <RatingBar
+            android:id="@+id/popuprating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:stepSize="1"
+            android:numStars="5"
+            android:isIndicator="true"
+            android:layout_marginBottom="10dp"
+            style="@style/Widget.AppCompat.RatingBar.Indicator"
+            android:progressTint="#DAC220"
+            android:progressBackgroundTint="#FAD305"
+            ></RatingBar>
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:text="확인"
+            android:textColor="@color/black"
+            android:id="@+id/popupbtn">
+
+        </Button>
+
+
+
+    </LinearLayout>
+</layout>
