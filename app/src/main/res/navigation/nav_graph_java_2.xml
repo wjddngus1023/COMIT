@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_java_2"
+    app:startDestination="@id/MainFragment2">
+
+    <!--    <fragment-->
+    <!--        android:id="@+id/SignInFragment"-->
+    <!--        android:name="com.example.comit.Community.SignInFragment"-->
+    <!--        android:label="@string/title_sign_in"-->
+    <!--        tools:layout="@layout/fragment_sign_in">-->
+
+    <!--        <action-->
+    <!--            android:id="@+id/action_SignInFragment_to_MainFragment"-->
+    <!--            app:popUpTo="@id/MainFragment"-->
+    <!--            app:destination="@id/MainFragment" />-->
+    <!--    </fragment>-->
+    <fragment
+        android:id="@+id/MainFragment2"
+        android:name="com.example.comit.LectureEval.MainFragment2"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_main_2">
+        <action
+            android:id="@+id/action_MainFragment_to_NewPostFragment_2"
+            app:destination="@id/NewPostFragment2" />
+        <!--        <action-->
+        <!--            android:id="@+id/action_MainFragment_to_SignInFragment"-->
+        <!--            app:popUpTo="@id/SignInFragment"-->
+        <!--            app:destination="@id/SignInFragment" />-->
+        <action
+            android:id="@+id/action_MainFragment_to_PostDetailFragment_2"
+            app:destination="@id/PostDetailFragment2" >
+            <argument android:name="post_key" app:nullable="false" app:argType="string" android:defaultValue=""/>
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/PostDetailFragment2"
+        android:name="com.example.comit.LectureEval.PostDetailFragment2"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_post_detail_2">
+        <action
+            android:id="@+id/action_PostDetailFragment_to_MainFragment_2"
+            app:destination="@id/MainFragment2"
+            app:popUpTo="@id/MainFragment2">
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/NewPostFragment2"
+        android:name="com.example.comit.LectureEval.NewPostFragment2"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_new_post_2">
+        <action
+            android:id="@+id/action_NewPostFragment_to_MainFragment_2"
+            app:destination="@id/MainFragment2"
+            app:popUpTo="@id/MainFragment2">
+        </action>
+    </fragment>
+</navigation>

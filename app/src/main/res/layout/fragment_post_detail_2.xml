@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin">
+
+<!--    <include-->
+<!--        android:id="@+id/postAuthorLayout"-->
+<!--        layout="@layout/include_post_author"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <include
+        android:id="@+id/postTextLayout2"
+        layout="@layout/include_post_text_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+         />
+
+
+
+    <RatingBar
+        android:id="@+id/average2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/buttonPostComment2"
+        android:layout_marginRight="50dp"
+        android:stepSize="0.1"
+        android:numStars="5"
+        android:isIndicator="true"
+        android:layout_marginBottom="10dp"
+        style="@style/Widget.AppCompat.RatingBar.Indicator"
+        android:progressTint="#DAC220"
+        android:progressBackgroundTint="#FAD305"
+        >
+
+    </RatingBar>
+
+    <TextView
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/average2"
+        app:layout_constraintBottom_toTopOf="@id/buttonPostComment2"
+        android:textSize="20dp"
+        android:text="4.6"
+        android:layout_marginLeft="3dp"
+        android:id="@+id/average_num"
+        android:layout_marginBottom="10dp"
+        >
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/fieldCommentText2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="댓글을 입력하세요..."
+        android:maxLines="1"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPostComment2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/postTextLayout2" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonPostComment2"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="게시"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"
+        app:strokeColor="@color/black"
+        app:strokeWidth="0.1dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintTop_toBottomOf="@+id/postTextLayout2"
+
+         />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="20dp"
+        android:id="@+id/recyclerPostComments2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPostComment2"
+        tools:listitem="@layout/item_comment" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
